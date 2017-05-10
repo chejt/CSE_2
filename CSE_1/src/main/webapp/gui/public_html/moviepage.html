@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"type="text/javascript"></script>
+        <script src="jquery.HorizontalBlocks.js" type="text/javascript"></script>
+        <link href="css/moviepage.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+        <script src="commenteditor.js" type="text/javascript"></script>
+        
+        
+        
+        
+        
+         <nav class="navbar navbar-default" role="navigation">
+    	  <div class="container">
+              
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <div class="navbar-brand navbar-brand-centered">FANDANGO</div>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-brand-centered">
+		      <ul class="nav navbar-nav">
+		        <li><a href="homepage.html">Home</a></li>
+		        <li><a href="movietimes.html">Movie Times+Tickets</a></li>
+		        <li><a href="articlesnews.html">Movie News</a></li>
+		        <li><a href="userpage.html">My Movies</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+                           <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">App Download <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                      <img style="width:200px;height:200px"src="img/QRcode.png"></img>
+                  </ul>
+                </li>
+                <li>
+                    <button class="btn btn-primary" data-toggle="modal" data-target=".bs-modal-sm" style="">
+                        Sign In
+                    </button>
+                    <hr class="signinform">
+                     <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <br>
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+            </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+        
+        <div class="tab-pane fade active in" id="signin">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Username/Email</label>
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="username@emailname.com" class="input-medium" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                  Remember me
+                </label>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <input id="Email" name="Email" class="form-control" type="text" placeholder="username@emailname.com" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Username:</label>
+              <div class="controls">
+                <input id="userid" name="userid" class="form-control" type="text" placeholder="Jones Brown" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                <em>Use 8 or more characters with a letter and a number or symbol. No more than 3 of the same character in a row.</em>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+              <div class="controls">
+                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">JOIN NOW FOR FREE</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+                </li>
+                          
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+                  
+                  <div class="row-row2">
+                      <div class="col-sm-3"><br></div>
+                      <div class="col-sm-6">
+                          <form method="get" action="/"class="form-inline">
+                              <input type="text" class="form-control"  style="width: 600px"placeholder="Enter City + State, ZIP Code, or Movie">
+                              <button type="submit" class="btn btn-primary">Search</button>
+                          </form>
+                      </div>
+                  </div>
+                  
+                 
+          
+		</nav>
+    </head>
+    <body>
+        <div class="container" style="background-color: #28a4c9">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row col-md-12" style="background-color: ">
+                <div class="col-md-1"></div>
+                <div class="col-md-3 col-md-4">
+                    <div class="row" style="background-color:">
+                        <br>
+                        <div class="col-sm-6" style="background-color: #28a4c9">
+                            <img src="img/movie.jpg" alt="">
+                            
+                    </div>
+                        
+                </div>
+                </div>
+                <div class="col-md-8 col-md-12" style="background-color:">
+                    <div class="row" >
+                            <h1>Birdy (1984)</h1><span class="glyphicons glyphicons-heart-empty"></span>
+                            <br>
+                            <h4>1h 19min - Action/Adventure - Released April 14, 2017</h4>
+                            
+                    </div>
+                            
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"><a href="homepage.html">Synopsis</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">Movie Times</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">Trailers</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">Cast</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">Reviews</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">News</a></button>
+                                <button type="button" class="btn btn-default"><a href="#">Photos</a></button>
+                    
+                                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                    
+                            </div>
+                            <br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2 col-md-2 text-center" style="background-color:" >
+                                        <h1 class="rating-num">4.0</h1>
+                                        <div class="rating">
+                                            <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
+                                            </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
+                                            </span><span class="glyphicon glyphicon-star-empty"></span>
+                                        </div>
+                        <div>
+                            <span class="glyphicon glyphicon-user"></span>1,050,008 total
+                        </div>
+                        <div class="row rating-desc">
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>5
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        <span class="sr-only">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 5 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>4
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 4 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>3
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">40%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 3 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>2
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        <span class="sr-only">20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 2 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>1
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                        <span class="sr-only">15%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 1 -->
+                        </div>
+                                        <br></div>
+                    <div class="col-md-3 text-left" style="background-color: ">
+                        <br>
+                        <h5>Director:  <a href="actorpage.html">Alan Parker</a></h5>
+                        <h5>Producer:  <a href="actorpage.html">Sandy Kroopf</a> / <a href="actorpage.html">Jack Behr</a></h5>
+                        <h5>Cast:      <a href="actorpage.html">Sandy Kroopf</a> / <a href="actorpage.html">Jack Behr</a> / <a href="actorpage.html">Sandy Kroopf</a> / <a href="actorpage.html">Jack Behr</a></h5>
+                        <h5>Genre:Comedy/drama</h5>
+                        <h5>Country/Region: United States</h5>
+                        <h5>Released Time: April 14, 2017</h5>
+                        <h5>Duration: 119 min</h5>
+                        <br>
+                        
+                    </div>
+                    
+                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 text-left" style="background-color:; width: 150px; height: 100px">
+
+                        <div class="ratings">
+                        <h5>Rating:</h5>
+                                <p>
+                                    
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                                            
+                                          
+                </div>
+                                        <div class="btn-group col-md-4">
+                            <button type="button" class="btn btn-default">Write Comment</button>
+                            <button type="button" class="btn btn-default">Write Review</button>
+                        </div>
+
+                                    </div>
+                                </div>
+                                
+                                
+                
+                
+            </div>
+                            
+                    </div>
+                <div class="col-md-1"></div>
+                    <div class="col-sm-4 text-left" style="background-color: ">
+                        <h2>Buy Movie Tickets</h2>
+                        <h4><a href>Marcus Oshkosh Cinema</a></h4>
+                        <ul class="nav nav-pills red-pills text-left">
+                            <li><a href="#" class="nav-link">9:50am</a></li>
+                            <li><a href="#" class="nav-link">12:15pm</a></li>
+                            <li><a href="#" class="nav-link">2:40pm</a></li>
+                        </ul>
+                        <br>
+                        </div>
+                
+                    
+                            
+                </div>
+            <br>
+                <h3>CAST + CREW-------------------------------------------------------------------------------------------------------</h3>
+                <div class="visual-list-container  native-scrolling text-left" style="background-color: s">
+                    
+            <ul class="list-inline">
+                <li class="list-group-item">
+                    <a href="actorpage.html">
+                        <img data-src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p704895/cp/cpc/images/masterrepository/performer images/p704895/chrismckay.jpg" alt="Chris McKay" class="visual-thumb" src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p704895/cp/cpc/images/masterrepository/performer images/p704895/chrismckay.jpg">
+                    </a>
+                    <h6>Chris McKay</h6>
+                    <h6 style="color: lightgray"><i>Director</i></h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <img data-src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p214970/cp/cpc/images/masterrepository/performer images/p214970/p214970.jpg" alt="Will Arnett" class="visual-thumb" src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p214970/cp/cpc/images/masterrepository/performer images/p214970/p214970.jpg">
+                    </a>
+                    <h6>Will Arnett</h6>
+                    <h6 style="color: lightgray"><i>Batman/Bruce Wayne</i></h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <img data-src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p283671/cp/cpc/images/masterrepository/performer images/p283671/zach149725929.jpg" alt="Zach Galifianakis" class="visual-thumb" src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p283671/cp/cpc/images/masterrepository/performer images/p283671/zach149725929.jpg">
+                    </a>
+                    <h6>Zach Galifianakis</h6>
+                    <h6 style="color: lightgray"><i>The Joker</i></h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <img data-src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p334354/cp/cpc/images/masterrepository/performer images/p334354/scottpilgrimvstheworld-pm-1.jpg" alt="Michael Cera" class="visual-thumb" src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p334354/cp/cpc/images/masterrepository/performer images/p334354/scottpilgrimvstheworld-pm-1.jpg">
+                    </a>
+                    <h6>Michael Cera</h6>
+                    <h6 style="color: lightgray"><i>Robin/Dick Grayson</i></h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <img data-src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p199028/cp/cpc/images/masterrepository/performer images/p199028/rosario164058993.jpg" alt="Rosario Dawson" class="visual-thumb" src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p199028/cp/cpc/images/masterrepository/performer images/p199028/rosario164058993.jpg">
+                    </a>
+                    <h6>Rosario Dawson</h6>
+                    <h6 style="color: lightgray"><i>Batgirl/Barbara Gordon</i></h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <img data-src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p23390/cp/cpc/images/masterrepository/performer images/p23390/p23390.jpg" alt="Ralph Fiennes" class="visual-thumb" src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p23390/cp/cpc/images/masterrepository/performer images/p23390/p23390.jpg">
+                    </a>
+                    <h6>Ralph Fiennes</h6>
+                    <h6 style="color: lightgray"><i>Alfred Pennyworth</i></h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <img data-src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p10883/cp/cpc/images/masterrepository/performer images/p10883/mariahcarey-7thannualwishnight-1.jpg" alt="Mariah Carey" class="visual-thumb" src="http://images.fandango.com/r103.4/ImageRenderer/125/188/redesign/static/img/no-image-portrait.png/p10883/cp/cpc/images/masterrepository/performer images/p10883/mariahcarey-7thannualwishnight-1.jpg">
+                    </a>
+                    <h6>Mariah Carey</h6>
+                    <h6 style="color: lightgray"><i>Mayor McCaskill</i></h6>
+                </li>
+                
+
+            </ul>
+
+        </div>
+                <h3>PHOTOS---------------------------------------------------------------------------------------------------------------</h3>
+                <div class="visual-list-container  native-scrolling text-left" style="background-color: ">
+                    <ul class="list-inline">
+                       
+                    <li class="list-group-item">
+                        <a href="#">
+                            <img src="img/photo1.jpg" alt="..." class="img-rounded">
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <img src="img/photo1.jpg" alt="..." class="img-rounded">
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <img src="img/photo1.jpg" alt="..." class="img-rounded">
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <img src="img/photo1.jpg" alt="..." class="img-rounded">
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <img src="img/photo1.jpg" alt="..." class="img-rounded">
+                        </a>
+                    </li>
+                    </ul>
+                    
+                </div>
+                <h3>REVIEWS--------------------------------------------------------------------------------------------------------------</h3>
+                
+                <div class="col-md-10">
+                    <div class="widget-area no-padding blank">
+                        <div class="status-upload">
+                            <form>
+                                <textarea placeholder="Say something"></textarea>
+                                <ul>
+                                    <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+                                    <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
+                                    <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
+                                    <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
+                                </ul>
+                                <button type="submit" class="btn btn-success green"><i class="fa fa-share">comment</i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+    
+                    <div class="span8">
+                        <h4><strong><a href="#">Title of the post</a></strong></h4>
+                    </div>
+
+                <div class="span6">      
+                    <p> HIGHLY RECOMMENDS
+                    </p>
+                    <p><a class="btn" href="#">Read more</a></p>
+                </div>
+    
+   
+                <div class="span8">
+                    <p></p>
+                    <p>
+          <i class="icon-user"></i> by <a href="#">John</a> 
+          | <i class="icon-calendar"></i> Sept 16th, 2012
+          | <i class="icon-comment"></i> <a href="#">3 Comments</a>
+          | <i class="icon-share"></i> <a href="#">39 Shares</a>
+        </p>
+                </div>
+   
+                </div>
+                <hr>
+                <br>
+                
+                <div class="col-md-8">
+    
+                    <div class="span8">
+                        <h4><strong><a href="#">Title of the post</a></strong></h4>
+                    </div>
+
+                <div class="span6">      
+                    <p>
+                    </p>
+                    <p><a class="btn" href="#">Read more</a></p>
+                </div>
+    
+   
+                <div class="span8">
+                    <p>In the upcoming Tallulah, 
+                                    Ellen Page stars as a young woman in desperate 
+                                    straits who ends up caring for a stranger's baby.</p>
+                    <p>
+          <i class="icon-user"></i> by <a href="#">John</a> 
+          | <i class="icon-calendar"></i> Sept 16th, 2012
+          | <i class="icon-comment"></i> <a href="#">3 Comments</a>
+          | <i class="icon-share"></i> <a href="#">39 Shares</a>
+        </p>
+                </div>
+   
+                </div>
+                <hr>
+                <br>
+
+                <div class="col-md-8">
+    
+                    <div class="span8">
+                        <h4><strong><a href="#">Title of the post</a></strong></h4>
+                    </div>
+
+                <div class="span6">      
+                    <p>      WOO...               </p>
+                    <p><a class="btn" href="#">Read more</a></p>
+                </div>
+    
+   
+                <div class="span8">
+                    <p></p>
+                    <p>
+          <i class="icon-user"></i> by <a href="#">John</a> 
+          | <i class="icon-calendar"></i> Sept 16th, 2012
+          | <i class="icon-comment"></i> <a href="#">3 Comments</a>
+          | <i class="icon-share"></i> <a href="#">39 Shares</a>
+        </p>
+                </div>
+   
+                </div>
+                <hr>
+                <br>
+                
+                <div class="col-md-8">
+    
+                    <div class="span8">
+                        <h4><strong><a href="#">Title of the post</a></strong></h4>
+                    </div>
+
+                <div class="span6">      
+                    <p> Great!!!!!!!!!!
+                    Highly recommends</p>
+                    <p><a class="btn" href="#">Read more</a></p>
+                </div>
+    
+   
+                <div class="span8">
+                    <p></p>
+                    <p>
+          <i class="icon-user"></i> by <a href="#">John</a> 
+          | <i class="icon-calendar"></i> Sept 16th, 2012
+          | <i class="icon-comment"></i> <a href="#">3 Comments</a>
+          | <i class="icon-share"></i> <a href="#">39 Shares</a>
+        </p>
+                </div>
+   
+                </div>
+                <hr>
+                <br>
+                <div class="col-md-12">
+                  <h3>ARTICLES----------------------------------------------------------------------------------------------------------</h3>
+                  
+                  <article>
+		        <div class="row">
+		            <div class="col-sm-6 col-md-4">
+		                <figure>
+		                    <img src="img/photo1.jpg">
+		                </figure>
+		            </div>
+		            <div class="col-sm-6 col-md-8">
+		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
+		                <h4>Article Title</h4>
+		                <p>In the upcoming Tallulah, 
+                                    Ellen Page stars as a young woman in desperate 
+                                    straits who ends up caring for a stranger's baby. 
+                                    The first trailer establishes the premise and the leading characters, 
+                                    including Allison Janney and Tammy Blanchard. </p>
+		                <section>
+		                    <i class="glyphicon glyphicon-user"></i>Author name
+		                    <i class="glyphicon glyphicon-calendar"></i>2017/4/17
+		                    <i class="glyphicon glyphicon-eye-open"></i>10000
+		                    <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
+		                </section>
+		            </div>
+		        </div>
+		    </article>
+                  <br>
+                  <article>
+		        <div class="row">
+		            <div class="col-sm-6 col-md-4">
+		                <figure>
+		                    <img src="img/photo1.jpg">
+		                </figure>
+		            </div>
+		            <div class="col-sm-6 col-md-8">
+		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
+		                <h4>Article Title</h4>
+		                <p>In the upcoming Tallulah, 
+                                    Ellen Page stars as a young woman in desperate 
+                                    straits who ends up caring for a stranger's baby. 
+                                    The first trailer establishes the premise and the leading characters, 
+                                    including Allison Janney and Tammy Blanchard. </p>
+		                <section>
+		                    <i class="glyphicon glyphicon-user"></i>Author name
+		                    <i class="glyphicon glyphicon-calendar"></i>2017/4/17
+		                    <i class="glyphicon glyphicon-eye-open"></i>10000
+		                    <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
+		                </section>
+		            </div>
+		        </div>
+		    </article>
+                  <br>
+                  <article>
+		        <div class="row">
+		            <div class="col-sm-6 col-md-4">
+		                <figure>
+		                    <img src="img/photo1.jpg">
+		                </figure>
+		            </div>
+		            <div class="col-sm-6 col-md-8">
+		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
+		                <h4>Article Title</h4>
+		                <p>In the upcoming Tallulah, 
+                                    Ellen Page stars as a young woman in desperate 
+                                    straits who ends up caring for a stranger's baby. 
+                                    The first trailer establishes the premise and the leading characters, 
+                                    including Allison Janney and Tammy Blanchard. </p>
+		                <section>
+		                    <i class="glyphicon glyphicon-user"></i>Author name
+		                    <i class="glyphicon glyphicon-calendar"></i>2017/4/17
+		                    <i class="glyphicon glyphicon-eye-open"></i>10000
+		                    <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
+		                </section>
+		            </div>
+		        </div>
+		    </article>
+                  <br>
+                  <article>
+		        <div class="row">
+		            <div class="col-sm-6 col-md-4">
+		                <figure>
+		                    <img src="img/photo1.jpg">
+		                </figure>
+		            </div>
+		            <div class="col-sm-6 col-md-8">
+		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
+		                <h4>Article Title</h4>
+		                <p>In the upcoming Tallulah, 
+                                    Ellen Page stars as a young woman in desperate 
+                                    straits who ends up caring for a stranger's baby. 
+                                    The first trailer establishes the premise and the leading characters, 
+                                    including Allison Janney and Tammy Blanchard. </p>
+		                <section>
+		                    <i class="glyphicon glyphicon-user"></i>Author name
+		                    <i class="glyphicon glyphicon-calendar"></i>2017/4/17
+		                    <i class="glyphicon glyphicon-eye-open"></i>10000
+		                    <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
+		                </section>
+		            </div>
+		        </div>
+		    </article>
+                  <br>
+
+                </div>
+
+            </div>
+    </body>
+    
+    <footer class="">
+
+        <div class="container text-center">
+    <hr />
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product for OS system</a></li>
+          <li><a href="#">Product for Windows</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Web analytics</a></li>
+          <li><a href="#">Presentations</a></li>          
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product Help</a></li>
+          <li><a href="#">Developer API</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+  <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="/">© 2017 Fandango</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </footer>
+</html>

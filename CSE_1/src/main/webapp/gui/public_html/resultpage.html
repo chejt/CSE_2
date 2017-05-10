@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>result page</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="css/resultpage.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <nav class="navbar navbar-default" role="navigation">
+    	  <div class="container">
+
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <div class="navbar-brand navbar-brand-centered">FANDANGO</div>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-brand-centered">
+		      <ul class="nav navbar-nav">
+		        <li><a href="homepage.html">Home</a></li>
+		        <li><a href="movietimes.html">Movie Times+Tickets</a></li>
+		        <li><a href="articlesnews.html">Movie News</a></li>
+		        <li><a href="userpage.html">My Movies</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+                           <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">App Download <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                      <img style="width:200px;height:200px"src="img/QRcode.png"></img>
+                  </ul>
+                </li>
+                <li>
+                    <button class="btn btn-primary" data-toggle="modal" data-target=".bs-modal-sm" style="">
+                        Sign In
+                    </button>
+                    <hr class="signinform">
+                     <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <br>
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+            </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+
+        <div class="tab-pane fade active in" id="signin">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Username/Email</label>
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="username@emailname.com" class="input-medium" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group text-center">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                  Remember me
+                </label>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <input id="Email" name="Email" class="form-control" type="text" placeholder="username@emailname.com" class="input-large" required="">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Username:</label>
+              <div class="controls">
+                <input id="userid" name="userid" class="form-control" type="text" placeholder="XuJing" class="input-large" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                <em>Use 8 or more characters with a letter and a number or symbol. No more than 3 of the same character in a row.</em>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+              <div class="controls">
+                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">JOIN NOW FOR FREE</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+                </li>
+
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+
+                  <div class="row-row2">
+                      <div class="col-sm-3"><br></div>
+                      <div class="col-sm-6">
+                          <form method="get" action="/"class="form-inline">
+                              <input type="text" class="form-control"  style="width: 600px"placeholder="Enter City + State, ZIP Code, or Movie">
+                              <button type="submit" class="btn btn-primary">Search</button>
+                          </form>
+                      </div>
+                  </div>
+
+		</nav>
+
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+
+
+
+
+                </div>
+
+            </div>
+
+            <h3>Showing Results for "batman"</h3>
+            <br>
+
+            <!--search results-->
+            <div style="background-color: #000000;">
+                <div class="container">
+                    <br>
+                    <div style="clear: both">
+                        <h3 style="color: white;margin: 0 0 0 0; float: left">Movie Results</h3>
+                        <h6 style="color: grey;margin: 0 0 0 0; float: left">(Showing 1-2 of 41)</h6>
+                        <h5 style="color: grey;margin: 0 2% 0 0; float: right"><a href="#">See All Movies</a></h5>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="img/batman1.jpg" alt="">
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="col-md-5">
+                                        <h3><a href="moviepage.html" class="nav-link">THE LEGO BATMAN MOVIE</a></h3>
+                                        <h6><i>released</i></h6>
+                                        <div class="ratings">
+                                            <p>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                            </p>
+                                        </div>
+                                        <h6>PG | 1 hr 46 min</h6>
+                                        <h6>Action/Adventure, Animated</h6>
+                                    </div>
+                                    <div class="col-md-7">
+                                        Cast + Crew <a href="#">Will Arnett</a>, <a href="#">Zach Galifianakis</a>, <a href="#">Michael Cera</a>, <a href="#">Rosario Dawson</a>, <a href="#">Ralph Fiennes</a>
+                                    </div>
+                                    <button type="button" class="pull-right btn btn-primary">Buy Tickets</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="img/batman2.jpg" alt="">
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="col-md-5">
+                                        <h3><a href="#" class="nav-link">BATMAN V SUPERMAN: DAWN OF JUSTICE</a></h3>
+                                        <h6><i>released</i></h6>
+                                        <div class="ratings">
+                                            <p>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                            </p>
+                                        </div>
+                                        <h6>PG13 | 2 hr 31 min</h6>
+                                        <h6>Action/Adventure, Sci-Fi/Fantasy</h6>
+                                    </div>
+                                    <div class="col-md-7">
+                                        Cast + Crew <a href="#">Ben Affleck</a>, <a href="#">Henry Cavill</a>, <a href="#">Amy Adams</a>, <a href="#">Diane Lane</a>, <a href="#">Laurence Fishburne</a>
+                                    </div>
+                                    <button type="button" class="pull-right btn btn-primary">Buy Tickets</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!--Trailer/Videos results-->
+            <div style="background-color: #000000;">
+                <div class="container">
+                    <br>
+                    <div style="clear: both">
+                        <h3 style="color: white;margin: 0 0 0 0; float: left">Trailers+Videos Results</h3>
+                        <h6 style="color: grey;margin: 0 0 0 0; float: left">(Showing 1-2 of 21)</h6>
+                        <h5 style="color: grey;margin: 0 2% 0 0; float: right"><a href="#">See All Trailers+Videos</a></h5>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="img/emptySource.jpg" alt="">
+                                </div>
+                                <div class="col-md-10">
+                                    <h3><a href="#" class="nav-link">BATMAN: RETURN OF THE CAPED CRUSADERS</a></h3>
+                                    <h6>Trailer (0:30)</h6>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="img/emptysource.jpg" alt="">
+                                </div>
+                                <div class="col-md-10">
+                                    <h3><a href="#" class="nav-link">BATMAN: THE KILLING JOKE</a></h3>
+                                    <h6>Clip (1:26)</h6>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+        <div class="container panel-footer ">
+
+            <hr>
+
+
+
+
+    </body>
+    <footer>
+        <div>
+                    <div class="footer-nav">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12 columns">
+                                <h3 class="footer-nav-header">Experience + Explore</h3>
+                                <ul class="footer-nav-list">
+                                    <li><a class="light" href="http://www.fandango.com/moviesintheaters">Movies In Theaters</a></li>
+                                    <li><a class="light" href="http://www.fandango.com/famous-actors-and-actresses">Movie Actors and Actresses</a></li>
+                                    <li><a class="light" href="http://www.fandango.com/mobilemovietickets">Mobile</a></li>
+                                    <li><a class="light" href="http://www.fandango.com/new-dvd-releases">New DVD Releases</a></li>
+                                    <li><a class="light" href="http://www.fandango.com/freemovietickets">Special Offers</a></li>
+                                    <li><a class="light" href="http://www.fandango.com/fandango-gift-cards">Gift Cards</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-12 columns">
+                                <h3 class="footer-nav-header">Features + Guides</h3>
+                                <ul class="footer-nav-list">
+
+                                    <li><a class="light" href="http://www.fandango.com/movies/family">Family</a></li>
+
+                                    <li><a class="light" href="http://www.fandango.com/movies/indie">Indie Movie Guide</a></li>
+
+                                    <li><a class="light" href="http://www.fandango.com/movie-news">Movie News</a></li>
+
+                                    <li><a class="light" href="http://www.fandango.com/movies/awards/">Awards Watch</a></li>
+
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-12 columns">
+                                <h3 class="footer-nav-header">Videos</h3>
+                                <ul class="footer-nav-list">
+
+                                    <li><a class="light" href="http://www.fandango.com/movie-trailer/">Movie Trailers</a></li>
+
+                                    <li><a class="light" href="http://www.fandango.com/video-galleries/awards/81">Frontrunners</a></li>
+
+                                    <li><a class="light" href="http://www.fandango.com/weekend-ticket/video_25">Weekend Ticket</a></li>
+
+                                    <li><a class="light" href="http://www.fandango.com/moms-movie-minute/video_92">Mom's Movie Minute</a></li>
+
+                                    <li><a class="light" href="http://www.fandango.com/reel-kids/video_93">Reel Kids</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-4 col-md-offset-4 col-md-4 col-sm-12 columns">
+                            <h4 class="heading-style-2 heading-size-s">Get Updates On All Things Movies:</h4>
+                            <div class="">
+                                <label class="" for="e">Sign up for FanMail</label>
+                                <input id="" class="" type="email" placeholder="Enter Email Address">
+                                <a id="" class="btn">Submit</a>
+                                <div class="error-msg" id=""></div>
+                            </div>
+                            <h3 id="" class="hide">
+                                THANKS FOR SIGNING UP!
+                            </h3>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 columns">
+                            <h4 class="heading-style-2 heading-size-s">Follow Us</h4>
+                            <span itemscope="" itemtype="#">
+                                <link itemprop="url" href="#">
+                                <a itemprop="sameAs" href="#" target="_blank" class="icon-social icon-facebook" rel="nofollow">Facebook</a>
+                                <a itemprop="sameAs" href="#" target="_blank" class="icon-social icon-twitter" rel="nofollow">Twitter</a>
+                                <a itemprop="sameAs" href="#" target="_blank" class="icon-social icon-instagram" rel="nofollow">Instagram</a>
+                                <a itemprop="sameAs" href="#" target="_blank" class="icon-social icon-googleplus" rel="nofollow">Google+</a>
+                                <a itemprop="sameAs" href="#" target="_blank" class="icon-social icon-tumblr" rel="nofollow">Tumblr</a>
+                                <a itemprop="sameAs" href="#" target="_blank" class="icon-social icon-youtube" rel="nofollow">Youtube</a>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="row">
+                        <div class="">
+                            Copyright © 2017 Dogwood. All rights reserved. Your Ticket to the Movies. Your Personal Box Office.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- needed for nano rep widget -->
+                <div class="" id=""></div>
+
+                <script src="js/jquery.js"></script>
+                        <script src="js/bootstrap.min.js"></script>
+
+    </footer>
+</html>

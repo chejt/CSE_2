@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+    <head>
+         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Homepage</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/homepage.css" rel="stylesheet">
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/carousel-1.js" type="text/javascript"></script>
+         <script src="js/carousel-2.js" type="text/javascript"></script>
+         <script src="js/filter.js" type="text/javascript"></script>
+
+         <nav class="navbar navbar-default" role="navigation">
+    	  <div class="container">
+
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <div class="navbar-brand navbar-brand-centered">FANDANGO</div>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-brand-centered">
+		      <ul class="nav navbar-nav">
+		        <li><a href="homepage.html">Home</a></li>
+		        <li><a href="movietimes.html">Movie Times+Tickets</a></li>
+		        <li><a href="articlesnews.html">Movie News</a></li>
+		        <li><a href="userpage.html">My Movies</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+                           <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">App Download <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                      <img style="width:200px;height:200px"src="img/QRcode.png"></img>
+                  </ul>
+                </li>
+                <li>
+                    <button class="btn btn-primary" data-toggle="modal" data-target=".bs-modal-sm" style="">
+                        Sign In
+                    </button>
+                    <hr class="signinform">
+                     <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <br>
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+            </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+
+        <div class="tab-pane fade active in" id="signin">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Username/Email</label>
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="username@emailname.com" class="input-medium" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                  Remember me
+                </label>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <input id="Email" name="Email" class="form-control" type="text" placeholder="username@emailname.com" class="input-large" required="">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Username:</label>
+              <div class="controls">
+                <input id="userid" name="userid" class="form-control" type="text" placeholder="XuJing" class="input-large" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                <em>Use 8 or more characters with a letter and a number or symbol. No more than 3 of the same character in a row.</em>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+              <div class="controls">
+                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">JOIN NOW FOR FREE</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+                </li>
+
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+
+                  <div class="row-row2">
+                      <div class="col-sm-3"><br></div>
+                      <div class="col-sm-6">
+                          <form method="get" action="/"class="form-inline">
+                              <input type="text" class="form-control"  style="width: 600px"placeholder="Enter City + State, ZIP Code, or Movie">
+                              <button type="submit" class="btn btn-primary">Search</button>
+                          </form>
+                      </div>
+                  </div>
+
+		</nav>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+
+
+                    <div class="col-md-12">
+                        <div class="container">
+                            <div class="row">
+                                <br>
+                                <h3>New Coming</h3>
+                                <br><br>
+                            </div>
+
+
+		<div class="col-md-12">
+                <div id="Carousel" class="carousel slide">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel" data-slide-to="1"></li>
+                    <li data-target="#Carousel" data-slide-to="2"></li>
+                    <li data-target="#Carousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+
+                <div class="item active">
+                	<div class="row">
+                	  <div class="col-md-3"><a href="moviepage.html" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                	</div><!--.row-->
+                </div><!--.item-->
+
+                <div class="item">
+                	<div class="row">
+                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                	</div><!--.row-->
+                </div><!--.item-->
+
+                <div class="item">
+                	<div class="row">
+                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                		<div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                	</div><!--.row-->
+                </div><!--.item-->
+
+                </div><!--.carousel-inner-->
+                  <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                  <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                </div><!--.Carousel-->
+
+		</div>
+	</div>
+                        </div>
+
+
+
+                    </div>
+
+
+                <br>
+                <!--Advertisement-->
+
+                <div class="row carousel-holder">
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                        <img class="slide-image" src="img/sample1.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="img/sample2.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="img/sample3.jpg" alt="">
+                                    </div>
+                            </div>
+                             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <!--Genre bar-->
+
+                <div class="col-md-10">
+                    <div class="row">
+                        <h3>select a Movie</h3>
+                        <br>
+                        <div class="gallery"></div>
+                        <div align="center">
+                <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default filter-button active" data-filter="action">ACTION</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="drama">DRAMA</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="comdy">COMEDY</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="kids">KIDS</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="horror">HORROR</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="romance">ROMANCE</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="scifi">SIC-FI</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="animated">ANIMATED</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="documented">DOCUMENTED</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="suspense">SUSPENSE</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="indie">INDIE</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="special event">SPECIAL EVENTS</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="historical">HISTORICAL FILM</button>
+                <button type="button" class="btn btn-default filter-button" data-filter="music">MUSIC/PERFORMING ARTS</button>
+
+            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <!--movie genre list-->
+                <div class="col-md-10 ">
+                    <div class="row">
+
+                        <div class="gallery_product filter action">
+                         <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster1.jpg" alt="">
+                                <div class="caption">
+                                    <h4><a href="trailer.html">Action movies</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter action">
+                         <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster1.jpg" alt="">
+                                <div class="caption">
+                                    <h4><a href="trailer.html">Action movies</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter action">
+                         <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster1.jpg" alt="">
+                                <div class="caption">
+                                    <h4><a href="trailer.html">First Product</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter action">
+                         <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster1.jpg" alt="">
+                                <div class="caption">
+                                    <h4><a href="trailer.html">First Product</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter action">
+                         <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster1.jpg" alt="">
+                                <div class="caption">
+                                    <h4><a href="trailer.html">First Product</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter drama">
+                         <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster1.jpg" alt="">
+                                <div class="caption">
+                                    <h4><a href="trailer.html">First Product</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="gallery_product filter drama">
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster4.jpg" alt="">
+                                <div class="caption">
+                                    <h4><a href="trailer.html">Fourth Product</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">6 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="gallery_product filter comedy">
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster4.jpg" alt="">
+                                <div class="caption">
+                                    <h4><a href="trailer.html">Fourth Product</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">6 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter kids">
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster4.jpg" alt="">
+                                <div class="caption">
+                                    <h4><a href="trailer.html">Fourth Product</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">6 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter horror">
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster2.jpg" alt="">
+                                <div class="caption">
+
+                                    <h4><a href="trailer.html">Second Product</a>
+                                    </h4>
+
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">12 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div></div>
+
+                        <div class="gallery_product filter romance"></div>
+                        <div class="gallery_product filter romance">
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster3.jpg" alt="">
+                                <div class="caption">
+
+                                    <h4><a href="trailer.html">Third Product</a>
+                                    </h4>
+                                                                    </div>
+                                <div class="ratings">
+                                    <p class="pull-right">31 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter romance">
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster8.jpg" alt="">
+                                <div class="caption">
+
+                                    <h4><a href="trailer.html">Fifth Product</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">18 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter scifi">
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster8.jpg" alt="">
+                                <div class="caption">
+
+                                    <h4><a href="trailer.html">Fifth Product</a>
+                                    </h4>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">18 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="gallery_product filter animated">
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster3.jpg" alt="">
+                                <div class="caption">
+
+                                    <h4><a href="trailer.html">Third Product</a>
+                                    </h4>
+                                                                    </div>
+                                <div class="ratings">
+                                    <p class="pull-right">31 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="gallery_product filter animated">
+                            <div class="ccol-sm-2 col-md-2 col-lg-2">
+                            <div class="thumbnail">
+                                <img src="img/poster2.jpg" alt="">
+                                <div class="caption">
+
+                                    <h4><a href="trailer.html">Second Product</a>
+                                    </h4>
+
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">12 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+                <!--movie genre list end-->
+
+
+                <!--feature articles-->
+                 <div class="col-md-8">
+                <div class="container">
+                    <div class="row">
+                    <div id="carousel-2" class="carousel slide text-left" data-ride="carousel">
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+        <div class="item active">
+          <img src="http://placehold.it/760x400/999999/cccccc">
+           <div class="carousel-caption">
+            <h4><a href="#">'GUARDIANS OF THE GALAXY VOL. 3' IS HAPPENING! AND IT WILL SET UP 10+ YEARS OF MARVEL STORIES!</a></h4>
+            <p>James Gunn has been a gift not just to the Marvel Cinematic Universe...</p>
+          </div>
+        </div><!-- End Item -->
+
+         <div class="item">
+          <img src="http://placehold.it/760x400/999999/cccccc">
+           <div class="carousel-caption">
+            <h4><a href="#">IRON MAN IS ALL OVER THE NEW 'SPIDER-MAN: HOMECOMING' TRAILER</a></h4>
+            <p>We'll all be seeing the aftermath of Guardians' success on other movies for years to come... </p>
+          </div>
+        </div><!-- End Item -->
+
+        <div class="item">
+          <img src="http://placehold.it/760x400/dddddd/333333">
+           <div class="carousel-caption">
+            <h4><a href="#">THE 'VENOM' MOVIE WILL REPORTEDLY HAVE AN R RATING, BUT NO SPIDER-MAN</a></h4>
+            <p>"In the end, my love for Rocket, Groot, Gamora, Star-Lord,..</p>
+          </div>
+        </div><!-- End Item -->
+
+        <div class="item">
+          <img src="http://placehold.it/760x400/999999/cccccc">
+           <div class="carousel-caption">
+            <h4><a href="#">IRON MAN IS ALL OVER THE NEW 'SPIDER-MAN: HOMECOMING' TRAILER</a></h4>
+            <p>We'll all be seeing the aftermath of Guardians' success on other movies for years to come... </p>
+          </div>
+        </div><!-- End Item -->
+
+        <div class="item">
+          <img src="http://placehold.it/760x400/dddddd/333333">
+           <div class="carousel-caption">
+            <h4><a href="#">IRON MAN IS ALL OVER THE NEW 'SPIDER-MAN: HOMECOMING' TRAILER</a></h4>
+            <p>We'll all be seeing the aftermath of Guardians' success on other movies for years to come... </p>
+          </div>
+        </div><!-- End Item -->
+
+      </div><!-- End Carousel Inner -->
+
+
+    <ul class="list-group col-sm-4">
+      <li data-target="#carousel-2" data-slide-to="0" class="list-group-item active"><h4>GUARDIANS OF THE GALAXY VOL. 3' IS HAPPENING! AND IT WILL SET UP 10+ YEARS OF MARVEL STORIES!</h4></li>
+      <li data-target="#carousel-2" data-slide-to="1" class="list-group-item"><h4>IRON MAN IS ALL OVER THE NEW 'SPIDER-MAN: HOMECOMING' TRAILER</h4></li>
+      <li data-target="#carousel-2" data-slide-to="2" class="list-group-item"><h4>THE 'VENOM' MOVIE WILL REPORTEDLY HAVE AN R RATING, BUT NO SPIDER-MAN</h4></li>
+      <li data-target="#carousel-2" data-slide-to="3" class="list-group-item"><h4>IRON MAN IS ALL OVER THE NEW 'SPIDER-MAN: HOMECOMING' TRAILER</h4></li>
+      <li data-target="#carousel-2" data-slide-to="4" class="list-group-item"><h4>IRON MAN IS ALL OVER THE NEW 'SPIDER-MAN: HOMECOMING' TRAILER</h4></li>
+    </ul>
+
+      <!-- Controls -->
+      <div class="carousel-controls">
+          <a class="left carousel-control" href="#carousel-2" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-2" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+      </div>
+
+    </div><!-- End Carousel -->
+</div>
+
+                </div>
+                </div>
+                </div>
+
+            </div>
+
+    </body>
+    <br>
+    <br>
+    <br>
+
+    <footer class="">
+
+        <div class="container text-center">
+    <hr />
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product for OS system</a></li>
+          <li><a href="#">Product for Windows</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Web analytics</a></li>
+          <li><a href="#">Presentations</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product Help</a></li>
+          <li><a href="#">Developer API</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="/">© 2017 Fandango</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </footer>
+
+
+
+</html>

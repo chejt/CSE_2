@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.web.clientproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/clientside-project/1">
+            <name>cse308</name>
+        </data>
+        <libraries xmlns="http://www.netbeans.org/ns/cdnjs-libraries/1">
+            <library name="jquery" version="3.2.1">
+                <file localPath="public_html/js/libs/jquery/core.js" path="core.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.js" path="jquery.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.min.js" path="jquery.min.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.min.map" path="jquery.min.map"/>
+                <file localPath="public_html/js/libs/jquery/jquery.slim.js" path="jquery.slim.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.slim.min.js" path="jquery.slim.min.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.slim.min.map" path="jquery.slim.min.map"/>
+            </library>
+        </libraries>
+    </configuration>
+</project>

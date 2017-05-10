@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 19, 2017, 5:03:10 AM
+    Author     : aliceliu
+*/
+
+@media screen and (min-width:768px){
+.navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+    }
+    
+    .navbar>.container .navbar-brand-centered, 
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -80px;
+    }
+}
+.signinform {
+        height: 5px;
+        border-top: 0;
+        border-radius: 5px;
+  
+}
+
+.siginbutton {
+    background-color:white;
+    
+}
+
+footer {
+    margin: 50px 0;
+}
+
